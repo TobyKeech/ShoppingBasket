@@ -24,9 +24,9 @@ public class TestShoppingBasket {
         customer2 = new Customer("Mar", 28, false);
         shoppingBasket = new ShoppingBasket();
         item1 = new Item("Bannans", 3.25, true);
-        item2 = new Item("Apple", 5.00, true);
+        item2 = new Item("Apple", 5.00, false);
         item3 = new Item("Oats", 3.60, true);
-        item4 = new Item("Guinness", 5.00, true);
+        item4 = new Item("Guinness", 5.00, false);
         item5 = new Item("Cereal", 4.00, true);
 
     }

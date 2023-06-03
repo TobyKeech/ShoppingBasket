@@ -23,7 +23,7 @@ public class Item {
         this.price = price;
     }
 
-    public boolean boGo() {
+    public boolean getBoGo() {
         return this.boGo;
     }
 
