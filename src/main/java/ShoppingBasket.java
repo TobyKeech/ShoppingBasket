@@ -39,11 +39,11 @@ public class ShoppingBasket {
         }
 
         if (total > 20.00) {
-            total *= 0.9; // 10% off
+            total *= 0.9;
         }
 
         if (customer.getLoyaltyCard()) {
-            total *= 0.98; // 2% off
+            total *= 0.98;
         }
 
         return total;
