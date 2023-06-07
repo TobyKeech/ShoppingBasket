@@ -32,18 +32,21 @@ public class ShoppingBasket {
         this.items.clear();
     }
 
-    public double calculateTotalValueOfBasket(ArrayList<Item> basket, Customer customer) {
-        double total = 0.0;
-        for (Item item : basket) {
+    public double calculateTotalValueOfBasket(ArrayList<Item> items, Customer customer) {
+        double total = 0;
+
+        for (Item item : items) {
             total += item.getPrice();
         }
-
         if (total > 20.00) {
-            total *= 0.9;
-        }
+            double discountToAdd = total *= 0.10;
+            double newTotal = total - discountToAdd;
+            return newTotal;
 
-        if (customer.getLoyaltyCard()) {
-            total *= 0.98;
+        } else if (customer.getLoyaltyCard()) {
+            double loyalyDiscount = total *= 0.02;
+            double newLoyTotal = total - loyalyDiscount;
+            return newLoyTotal;
         }
 
         return total;
